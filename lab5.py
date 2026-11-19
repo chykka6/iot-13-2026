@@ -12,10 +12,10 @@ class Bug:
         self.status = status
         self.assignee = assignee
 
-    def __str__ (self):
+    def __str__(self):
         return(f"desc = {self.desc}, deadline = {self.deadline}")
 
-    def __repr__ (self):
+    def __repr__(self):
         return(f"desc = {self.desc}, deadline = {self.deadline}")
     
     def getDesc(self):
@@ -49,7 +49,7 @@ class Backlog():
         self.name = name
 
     def __str__ (self):
-            return(f"{self.name}")
+        return(f"{self.name}")
 
     def getBugs(self):
         return self.bugs
@@ -64,17 +64,17 @@ class Backlog():
         self.name = name
 
 def main(): 
-   assignee = input('Введіть імя користувача для пошуку: ')
+   assignee = input('Введіть ім/'я користувача для пошуку: ')
 
-   backlog = Backlog(name = "mybacklog")
+   backlog=Backlog(name = "mybacklog")
 
-   bug = Bug(desc = "bug1", assignee = "Taras", status = "open", severity = 1)
+   bug=Bug(desc = "bug1", assignee = "Taras", status = "open", severity = 1)
    
-   bug2 = Bug(desc = "bug2", assignee = "Alex", status = "resolved", severity = 2, deadline = datetime.date(2026, 6, 1))
+   bug2=Bug(desc = "bug2", assignee = "Alex", status = "resolved", severity = 2, deadline = datetime.date(2026, 6, 1))
    
-   bug3 = Bug(desc = "bug3", assignee = "Alex", status = "resolved", severity = 3, deadline = datetime.date(2026, 5, 15))
+   bug3=Bug(desc = "bug3", assignee = "Alex", status = "resolved", severity = 3, deadline = datetime.date(2026, 5, 15))
    
-   bug4 = Bug(desc = "bug4", assignee = "Taras", status = "resolved", severity = 1, deadline = datetime.date(2026, 5, 17))
+   bug4=Bug(desc = "bug4", assignee = "Taras", status = "resolved", severity = 1, deadline = datetime.date(2026, 5, 17))
    
    backlog.setBugs([bug, bug2, bug3, bug4])
 

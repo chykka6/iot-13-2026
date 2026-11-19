@@ -42,7 +42,7 @@ class Bug:
     def setStatus(self, status: str):
         self.status = status
 
-class Backlog():
+class Backlog:
 
     def __init__(self, bugs: list[Bug] = None, name: str = ""):
         self.bugs = bugs if bugs is not None else []
@@ -64,7 +64,7 @@ class Backlog():
         self.name = name
 
 def main(): 
-   assignee = input('Введіть ім/'я користувача для пошуку: ')
+   assignee=input('Введіть ім/'я користувача для пошуку: ')
 
    backlog=Backlog(name = "mybacklog")
 
